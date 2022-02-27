@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Stage1Fragment">
+
+  <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="STAGE 1"
+      android:textSize="40dp"
+      app:layout_constraintBottom_toTopOf="@id/editText"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <TextView
+      android:id="@+id/label"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Integer: "
+      android:textSize="40dp"
+      app:layout_constraintBaseline_toBaselineOf="@id/editText"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@id/editText" />
+  <EditText
+      android:id="@+id/editText"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:textSize="30dp"
+      android:inputType="number"
+      app:layout_constraintBottom_toTopOf="@id/nextStage"
+      app:layout_constraintLeft_toRightOf="@id/label"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textView" />
+
+  <Button
+      android:id="@+id/nextStage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="next ≫"
+      app:layout_constraintBottom_toTopOf="@id/showDialog"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/textView" />
+
+  <Button
+      android:id="@+id/showDialog"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="show SaveAndEndGameDialog"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toBottomOf="@id/nextStage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
